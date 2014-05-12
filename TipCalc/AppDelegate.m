@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TipViewController.h"
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +16,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    TipViewController *vc = [[TipViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    self.window.rootViewController = nvc;
+    
+   // SettingsViewController *set = [[SettingsViewController alloc] init];
+  //  [nvc pushViewController:set animated:YES];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
